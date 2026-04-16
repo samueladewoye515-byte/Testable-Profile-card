@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Profile Card · Frontend Wizards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <article class="profile-card" data-testid="test-profile-card">
+    
+    <!-- Avatar area – placed prominently at the top -->
+    <figure class="avatar-figure">
+      <img 
+        src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jordan&backgroundColor=b0d5c5" 
+        alt="Illustrated avatar of Jordan Chen" 
+        class="avatar-img" 
+        data-testid="test-user-avatar"
+        width="400" height="400"
+      >
+      <figcaption class="avatar-figcaption">🌿 Jordan Chen</figcaption>
+    </figure>
+
+    <!-- Main content section -->
+    <div class="card-content">
+      
+      <!-- Name and live time in a clean header -->
+      <header class="profile-header">
+        <h2 class="user-name" data-testid="test-user-name">Jordan Chen</h2>
+        <div class="time-badge" aria-live="polite" aria-atomic="true">
+          <span class="time-label">⏱️ epoch ms</span>
+          <span 
+            id="live-time" 
+            class="user-time" 
+            data-testid="test-user-time"
+            role="timer"
+          >0</span>
+        </div>
+      </header>
+      
+      <!-- Short biography -->
+      <p class="user-bio" data-testid="test-user-bio">
+        🌱 Botanist turned frontend developer. I love building calm, accessible digital spaces. 
+        Currently obsessed with CSS grids, gardening and herbal tea experiments.
+      </p>
+      
+      <!-- Social navigation -->
+      <nav class="social-nav" aria-label="Social media profiles">
+        <ul class="social-list" data-testid="test-user-social-links">
+          <li>
+            <a href="https://twitter.com/jordanchen" target="_blank" rel="noopener noreferrer" 
+               class="social-link" data-testid="test-user-social-twitter"
+               aria-label="Twitter (opens in new tab)">
+              🐦 Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/jordanchen" target="_blank" rel="noopener noreferrer" 
+               class="social-link" data-testid="test-user-social-github"
+               aria-label="GitHub (opens in new tab)">
+              🌿 GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/jordanchen" target="_blank" rel="noopener noreferrer" 
+               class="social-link" data-testid="test-user-social-linkedin"
+               aria-label="LinkedIn (opens in new tab)">
+              🔗 LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- Hobbies and Dislikes side by side -->
+      <div class="lists-row">
+        <section class="list-card" aria-labelledby="hobbies-heading">
+          <h3 id="hobbies-heading" class="list-title">🌻 Hobbies</h3>
+          <ul class="list-items" data-testid="test-user-hobbies">
+            <li>Urban gardening</li>
+            <li>CSS art & animations</li>
+            <li>Fermenting kombucha</li>
+            <li>Nature photography</li>
+          </ul>
+        </section>
+        
+        <section class="list-card" aria-labelledby="dislikes-heading">
+          <h3 id="dislikes-heading" class="list-title">🍂 Dislikes</h3>
+          <ul class="list-items" data-testid="test-user-dislikes">
+            <li>Plastic waste</li>
+            <li>Slow internet</li>
+            <li>Unlabeled buttons</li>
+            <li>Over‑watered succulents</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>
